@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Obesity Epidemic Solution</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Font Awesome link -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Add your style.css link here -->
+  </head>
+  <body>
+    <div class="area">
+      <nav class="main-menu">
+        <ul>
+          <li>
+            <a id="nav-title" href="/index">
+              <i class="fa fa-heart"></i>
+              <span class="nav-text"> Diabetes Prediction </span>
+            </a>
+          </li>
+        </ul>
+        <hr />
+        <ul>
+          <li>
+            <a href="/dashboard">
+              <i class="fa fa-stethoscope fa-2x"></i>
+              <span class="nav-text"> Dashboard </span>
+            </a>
+          </li>
+          <li class="has-subnav">
+            <a href="/disindex">
+              <i class="fa fa-notes-medical fa-2x"></i>
+              <span class="nav-text"> Disease Index </span>
+            </a>
+          </li>
+          <li class="has-subnav">
+            <a href="/cancer">
+              <i class="fa fa-lungs fa-2x"></i>
+              <span class="nav-text"> Cancer </span>
+            </a>
+          </li>
+          <li class="has-subnav">
+            <a href="/diabetes">
+              <i class="fa fa-syringe fa-2x"></i>
+              <span class="nav-text"> Diabetes </span>
+            </a>
+          </li>
+          <li>
+            <a href="/heart">
+              <i class="fa fa-heartbeat fa-2x"></i>
+              <span class="nav-text"> Heart Disease </span>
+            </a>
+          </li>
+          <li>
+            <a href="/kidney">
+              <i class="fa fa-glass-whiskey fa-2x"></i>
+              <span class="nav-text"> Kidney Disease </span>
+            </a>
+          </li>
+          <li>
+            <a href="/liver">
+              <i class="fa fa-wine-bottle fa-2x"></i>
+              <span class="nav-text"> Liver Disease </span>
+            </a>
+          </li>
+        </ul>
+
+       <ul class="logout">
+          <li>
+            <a href="/index">
+              <i class="fa fa-house-chimney fa-2x"></i>
+              <span class="nav-text"> Home </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- partial:index.partial.html -->
+    <body>
+      <h1>Diabetes Prediction</h1>
+      <div class="container">
+        <div class="cta-form">
+          <h2>Fill out the form!</h2>
+          <p>Check out the comments for line-by-line explanations.</p>
+      
+          <!-- Risk Levels for Diabetes Features -->
+          <ul>
+              <li><strong>Low Risk:</strong> Values within the lower range.</li>
+              <li><strong>High Risk:</strong> High values, indicates potential diabetes risk.</li>
+          </ul>
+      
+          <!-- Feature Ranges -->
+          <p>Feature Ranges:</p>
+          <ul>
+              <li><strong>Pregnancies:</strong> Low (0-2), High ( 5-17)</li>
+              <li><strong>Glucose:</strong> Low (70-125), High ( 126-199)</li>
+              <li><strong>Blood Pressure:</strong> Low (60-80), High (80-122)</li>
+              <li><strong>Skin Thickness:</strong> Low (20-30), High ( 30-99)</li>
+              <li><strong>Insulin:</strong> Low (30-150), High (150-846)</li>
+              <li><strong>BMI:</strong> Low (18.5-24.9), High (25-67.1)</li>
+              <li><strong>Diabetes Pedigree Function:</strong> Low (0-0.8), High (0.8-2.42)</li>
+              <li><strong>Age:</strong> Low (21-40), High (40-81)</li>
+          </ul>
+      </div>
+      
+
+        <form action="{{ url_for('predictt')}}" method="post" class="form">
+          <fieldset>
+            <h5>Please enter the patient details:</h5><hr>
+            <div class="form-group">
+              <label for="pregnancies">Number of Pregnancies (0-20): </label>
+              <input type="text" id="pregnancies" name="pregnancies" />
+            </div>
+
+            <div class="form-group">
+              <label for="glucose">Glucose Level (mg/dL) (60-200): </label>
+              <input type="text" id="glucose" name="glucose" />
+            </div>
+
+            <div class="form-group">
+              <label for="bloodpressure">Blood Pressure (mmHg) (0-125): </label>
+              <input type="text" id="bloodpressure" name="bloodpressure" />
+            </div>
+
+            <div class="form-group">
+              <label for="skinthickness">Skin Thickness (mm) (0-99): </label>
+              <input type="text" id="skinthickness" name="skinthickness" />
+            </div>
+
+            <div class="form-group">
+              <label for="insulin">Insulin Level (IU/mL) (0-850): </label>
+              <input type="text" id="insulin" name="insulin" />
+            </div>
+
+            <div class="form-group">
+              <label for="bmi">Body Mass Index (kg/m²) (0-70): </label>
+              <input type="text" id="bmi" name="bmi" />
+            </div>
+
+            <div class="form-group">
+              <label for="dpf">Diabetes Pedigree Function (0-3): </label>
+              <input type="text" id="dpf" name="dpf" />
+            </div>
+
+            <div class="form-group">
+              <label for="age">Patient Age in Years (21-85): </label>
+              <input type="text" id="age" name="age" />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg">
+              Predict
+            </button>
+          </fieldset>
+        </form>
+      </div>
+      <div class="explanation">
+        <p>
+          Before we delve into diabetes features, let's understand how these
+          features play a crucial role in predicting diabetes risk. Each feature
+          provides valuable information that contributes to the overall
+          assessment.
+        </p>
+        <ul>
+          <li>
+            <strong>Pregnancies:</strong> The number of times a person has been
+            pregnant. Ranges from 0 to 17.
+          </li>
+          <li>
+            <strong>Glucose:</strong> The blood glucose concentration. Ranges
+            from 0 to 199. Higher values may indicate higher diabetes risk.
+          </li>
+          <li>
+            <strong>Blood Pressure:</strong> The diastolic blood pressure.
+            Ranges from 0 to 122. Elevated values may suggest health concerns.
+          </li>
+          <li>
+            <strong>Skin Thickness:</strong> The thickness of the skinfold.
+            Ranges from 0 to 99. Higher values may be associated with higher
+            body fat.
+          </li>
+          <li>
+            <strong>Insulin:</strong> Insulin concentration. Ranges from 0 to
+            846. Abnormal values may indicate insulin resistance.
+          </li>
+          <li>
+            <strong>BMI (Body Mass Index):</strong> A measure of body fat based
+            on height and weight. Ranges from 0 to 67.1. Higher values may
+            indicate obesity.
+          </li>
+          <li>
+            <strong>Diabetes Pedigree Function:</strong> A function that
+            represents diabetes prevalence in relatives. Ranges from 0 to 2.42.
+            Higher values may indicate a genetic predisposition.
+          </li>
+          <li>
+            <strong>Age:</strong> The age of the person. Ranges from 21 to 81.
+            Age can be a significant factor in diabetes risk assessment.
+          </li>
+          <!-- <li><strong>Outcome:</strong> This binary label indicates whether a person has diabetes (1) or not (0).</li> -->
+        </ul>
+        <p>
+          Understanding the ranges and descriptions of these features is crucial
+          for assessing diabetes risk. Here's a general guideline for risk
+          levels:
+        </p>
+        <ul>
+          <li>
+            <strong>Low Risk:</strong> Values within the lower range of each
+            feature.
+          </li>
+          <li>
+            <strong>High Risk:</strong> Values at the upper range, indicating a
+            significant risk of diabetes. For specific feature ranges:
+            <ul>
+              <li><strong>Pregnancies:</strong> 5-17</li>
+              <li><strong>Glucose:</strong> 126-199</li>
+              <li><strong>Blood Pressure:</strong> 80-122</li>
+              <li><strong>Skin Thickness:</strong> 30-99</li>
+              <li><strong>Insulin:</strong> 150-846</li>
+              <li><strong>BMI (Body Mass Index):</strong> 25-67.1</li>
+              <li><strong>Diabetes Pedigree Function:</strong> 0.8-2.42</li>
+              <li><strong>Age:</strong> 40-81</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </body>
+    <!-- partial -->
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
