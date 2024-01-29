@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Obesity Epidemic Solutions</title>
+
+    <!--owl slider stylesheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+
+    <!-- bootstrap core css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/bootstrap.css') }}"
+    />
+    <!-- fonts awesome style -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/font-awesome.min.css') }}"
+    />
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,500,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template -->
+    <link
+      type="text/css"
+      href="{{ url_for('static', filename='css/style.css') }}"
+      rel="stylesheet"
+    />
+    <!-- responsive style -->
+    <link
+      type="text/css"
+      href="{{ url_for('static', filename='css/responsive.css"
+      rel="stylesheet') }}"
+    />
+    <style></style>
+  </head>
+
+  <body>
+    <div class="hero_area">
+      <!-- header section strats -->
+      < class="header_section">
+        <div class="contact_nav_container">
+          <div class="container">
+            <div class="contact_nav">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span> Address : NSTI Mumbai, Chunnabhati, Mumbai </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span> Email : shivampabrekar123@gmail.com </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span> Phone Call : +01 123455678990 </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+              </button>
+            </div>
+            <div id="myNav" class="overlay">
+              <div class="menu_btn-style">
+                <button onclick="closeNav()">
+                  <span class="s-1"> </span>
+                  <span class="s-2"> </span>
+                  <span class="s-3"> </span>
+                </button>
+              </div>
+              <div class="overlay-content">
+                <a class="active" href="/">
+                  Home <span class="sr-only">(current)</span></a
+                >
+                <a class="" href="/about"> About</a>
+                <a class="" href="/why"> Why Us </a>
+                <a class="" href="/team"> Our Team</a>
+                <a class="" href="/testimonial"> Testimonial</a>
+                <a class="" href="/contact"> Contact Us</a>
+                <a class="" href="/dashboard">Dashboard</a>
+              </div>
+            </div>
+            <a class="navbar-brand" href="/">
+              <span> Obesity Epidemic Solutions </span>
+            </a>
+            <div class="user_option">
+              <!-- <a href="">
+              <span>
+                Login
+              </span>
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </a> -->
+              <!-- <form class="form-inline">
+              <button class="btn  nav_search-btn" type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form> -->
+            </div>
+          </nav>
+        </div>
+      <header>
+        <section class="info_section layout_padding2" style="margin: 50px auto;">
+          <h1>Liver Prediction</h1>
+                                  <div class="container">
+                                   <div class="cta-form">
+                                <h2>Fill out the form!</h2>
+                                <p>Check out the comments for line-by-line explanations.</p>
+                            
+                                <!-- Risk Levels for Liver Disease Features -->
+                                <ul>
+                                    <li><strong>Low Risk:</strong> Values within the lower range.</li>
+                                    <li>
+                                        <strong>High Risk:</strong> High values, indicates potential liver disease risk.
+                                    </li>
+                                </ul>
+                                
+                                <form action="{{ url_for('predictliver')}}" method="post" class="form">
+                                  <fieldset>
+                                    <h5>Please enter the patient details:</h5><hr>
+                                    <div class="tabcontent" id="new">
+                                        <div class="form-group">
+                                          <label for="age">Age (0-100 years): </label>
+                                          <input class="form-control"  id="age" name="age">
+                                      </div>
+
+                                      <div class="form-group">
+                                        <label for="gender">Gender :</label>
+                                        <select class="form-control" id="gender" name="gender">
+                                            <option value="1">Male</option>
+                                            <option value="0">Female</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                      <label for="total_bilirubin">Total Bilirubin (0-10 mg/dL): </label>
+                                      <input class="form-control" id="total_bilirubin" name="total_bilirubin">
+                                  </div>
+                                  
+                                  <div class="form-group">
+                                      <label for="direct_bilirubin">Direct Bilirubin (0-5 mg/dL): </label>
+                                      <input class="form-control" id="direct_bilirubin" name="direct_bilirubin">
+                                  </div>
+                                  
+                                  <div class="form-group">
+                                      <label for="alkaline_phosphotase">Alkaline Phosphotase (0-2000 IU/L): </label>
+                                      <input class="form-control" id="alkaline_phosphotase" name="alkaline_phosphotase">
+                                  </div>
+                                  
+                                  <div class="form-group">
+                                      <label for="alamine_aminotransferase">Alamine Aminotransferase (0-2000 IU/L): </label>
+                                      <input class="form-control" id="alamine_aminotransferase" name="alamine_aminotransferase">
+                                  </div>
+                                  
+                                  <div class="form-group">
+                                      <label for="aspartate_aminotransferase">Aspartate Aminotransferase (0-2000 IU/L): </label>
+                                      <input class="form-control" id="aspartate_aminotransferase" name="aspartate_aminotransferase">
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label for="total_protiens">Total Proteins (0-10 g/dL): </label>
+                                    <input class="form-control" id="total_protiens" name="total_protiens">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="albumin">Albumin (0-10 g/dL): </label>
+                                    <input class="form-control" id="albumin" name="albumin">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="albumin_and_globulin_ratio">Albumin and Globulin Ratio (0-10): </label>
+                                    <input class="form-control" id="albumin_and_globulin_ratio" name="albumin_and_globulin_ratio">
+                                </div>
+
+                                <div>
+                                  <button type="submit" class="btn btn btn-lg">Predict</button>
+                                   </div>
+                                    
+                                  </fieldset>
+                                </form>
+
+                                <div class="explanation">
+                                  <h2>Liver Disease Prediction</h2>
+                                  <p>
+                                      Before we explore the features for predicting liver disease, let's understand how these features contribute to assessing the risk of liver-related issues. Each feature provides valuable insights that aid in evaluating the overall condition of the liver.
+                                  </p>
+                                  <ul>
+                                      <li>
+                                          <strong>Total Bilirubin:</strong> The total amount of bilirubin in the blood. Ranges from 0 to 3 mg/dL. Elevated values may indicate potential liver dysfunction.
+                                      </li>
+                                      <li>
+                                          <strong>Direct Bilirubin:</strong> The direct (conjugated) bilirubin level in the blood. Ranges from 0 to 1 mg/dL. Higher values can suggest impaired liver function.
+                                      </li>
+                                      <li>
+                                          <strong>Total Proteins:</strong> The total amount of proteins in the blood. Ranges from 2 to 8 g/dL. Abnormal levels may be associated with liver issues.
+                                      </li>
+                                      <li>
+                                          <strong>Albumin:</strong> The level of albumin in the blood. Ranges from 1 to 6 g/dL. Deviations from the normal range may indicate liver disorders.
+                                      </li>
+                                      <li>
+                                          <strong>Albumin and Globulin Ratio:</strong> The ratio of albumin to globulin in the blood. Ranges vary. Abnormal ratios may be linked to liver conditions.
+                                      </li>
+                                      <li>
+                                          <strong>Alamine Aminotransferase (ALT):</strong> An enzyme that may indicate liver damage. Ranges vary. Elevated values may suggest liver issues.
+                                      </li>
+                                      <li>
+                                          <strong>Aspartate Aminotransferase (AST):</strong> An enzyme found in the liver and other tissues. Ranges vary. Abnormal levels may indicate liver problems.
+                                      </li>
+                                      <li>
+                                          <strong>Alkaline Phosphatase:</strong> An enzyme that may indicate liver or bone issues. Ranges vary. Elevated values may suggest liver dysfunction.
+                                      </li>
+                                  </ul>
+                                  <p>
+                                      Understanding the ranges and descriptions of these features is crucial for assessing the risk of liver disease. Here's a general guideline for risk levels:
+                                  </p>
+                                  <ul>
+                                      <li>
+                                          <strong>Low Risk:</strong> Values within the lower range of each feature.
+                                      </li>
+                                      <li>
+                                          <strong>High Risk:</strong> Values at the upper range, indicating a significant risk of liver disease. For specific feature ranges:
+                                          <ul>
+                                              <li><strong>Total Bilirubin:</strong> 0-3 mg/dL</li>
+                                              <li><strong>Direct Bilirubin:</strong> 0-1 mg/dL</li>
+                                              <li><strong>Total Proteins:</strong> 2-8 g/dL</li>
+                                              <li><strong>Albumin:</strong> 1-6 g/dL</li>
+                                              <li><strong>Albumin and Globulin Ratio:</strong> Varies</li>
+                                              <li><strong>Alamine Aminotransferase (ALT):</strong> Varies</li>
+                                              <li><strong>Aspartate Aminotransferase (AST):</strong> Varies</li>
+                                              <li><strong>Alkaline Phosphatase:</strong> Varies</li>
+                                          </ul>
+                                      </li>
+                                  </ul>
+                              </div>
+                            </div>
+            </section>
+      </header>
+                                
+
+                                      
+                            
+                                   
+
+                                           
+
+
+        
+          <!-- end info section -->
+        
+          <!-- footer section -->
+          <section class="info_section layout_padding2">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="info_contact">
+                    <h5>
+                      Address
+                    </h5>
+                    <div class="contact_link_box">
+                      <a href="">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <span>
+                          Location
+                        </span>
+                      </a>
+                      <a href="">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span>
+                          Call +01 1234567890
+                        </span>
+                      </a>
+                      <a href="">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <span>
+                          demo@gmail.com
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="info_social">
+                    <a href="">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="info_link_box">
+                    <h5>
+                      Navigation
+                    </h5>
+                    <div class="info_links">
+                      <a class="active" href="index.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Home <span class="sr-only">(current)</span></a>
+                      <a class="" href="about.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> About</a>
+                      <a class="" href="why.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Why Us </a>
+                      <a class="" href="team.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Our Team</a>
+                      <a class="" href="testimonial.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Testimonial</a>
+                      <a class="" href="contact.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Contact Us</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h5>
+                    Newsletter
+                  </h5>
+                  <form action="">
+                    <input type="text" placeholder="Enter Your email" />
+                    <button type="submit">
+                      Subscribe
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+        
+          <!-- end info section -->
+        
+          <!-- footer section -->
+          <footer class="footer_section container-fluid">
+            <p>
+              &copy; <span id="displayYear"></span> All Rights Reserved. ObesityEpidemicSolutions
+            </p>
+          </footer>
+          <!-- footer section -->
+        
+          <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+          <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+          <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+        
+        </body>
+        
+        </html>

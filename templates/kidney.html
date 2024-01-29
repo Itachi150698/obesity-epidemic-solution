@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Obesity Epidemic Solutions</title>
+
+    <!--owl slider stylesheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+
+    <!-- bootstrap core css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/bootstrap.css') }}"
+    />
+    <!-- fonts awesome style -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/font-awesome.min.css') }}"
+    />
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,500,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template -->
+    <link
+      type="text/css"
+      href="{{ url_for('static', filename='css/style.css') }}"
+      rel="stylesheet"
+    />
+    <!-- responsive style -->
+    <link
+      type="text/css"
+      href="{{ url_for('static', filename='css/responsive.css"
+      rel="stylesheet') }}"
+    />
+    <style></style>
+  </head>
+
+  <body>
+    <div class="hero_area">
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="contact_nav_container">
+          <div class="container">
+            <div class="contact_nav">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span> Address : NSTI Mumbai, Chunnabhati, Mumbai </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span> Email : shivampabrekar123@gmail.com </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span> Phone Call : +01 123455678990 </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+              </button>
+            </div>
+            <div id="myNav" class="overlay">
+              <div class="menu_btn-style">
+                <button onclick="closeNav()">
+                  <span class="s-1"> </span>
+                  <span class="s-2"> </span>
+                  <span class="s-3"> </span>
+                </button>
+              </div>
+              <div class="overlay-content">
+                <a class="active" href="/">
+                  Home <span class="sr-only">(current)</span></a
+                >
+                <a class="" href="/about"> About</a>
+                <a class="" href="/why"> Why Us </a>
+                <a class="" href="/team"> Our Team</a>
+                <a class="" href="/testimonial"> Testimonial</a>
+                <a class="" href="/contact"> Contact Us</a>
+                <a class="" href="/dashboard">Dashboard</a>
+              </div>
+            </div>
+            <a class="navbar-brand" href="/">
+              <span> Obesity Epidemic Solutions </span>
+            </a>
+            <div class="user_option">
+              <!-- <a href="">
+              <span>
+                Login
+              </span>
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </a> -->
+              <!-- <form class="form-inline">
+              <button class="btn  nav_search-btn" type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form> -->
+            </div>
+          </nav>
+        </div>
+      </header>
+                                <section class="info_section layout_padding2" style="margin: 50px auto;">
+                                    <h1>Kidney Prediction</h1>
+      <div class="container">
+        <div class="cta-form">
+    <h2>Fill out the form!</h2>
+    <p>Check out the comments for line-by-line explanations.</p>
+
+    <!-- Risk Levels for Kidney Disease Features -->
+    <ul>
+        <li><strong>Low Risk:</strong> Values within the lower range.</li>
+        <li>
+            <strong>High Risk:</strong> High values, indicates potential kidney disease risk.
+        </li>
+    </ul>
+
+    <!-- Feature Ranges for Kidney Disease -->
+    <p>Feature Ranges:</p>
+    <ul>
+        <li>
+            <strong>Age:</strong> Low (0-30 years), High (31+ years).
+        </li>
+        <li>
+            <strong>Blood Pressure:</strong> Low (60-80 mmHg), High (80+ mmHg).
+        </li>
+        <li>
+            <strong>Specific Gravity:</strong> Low (1.000-1.010), High (1.010+).
+        </li>
+        <li>
+            <strong>Albumin:</strong> Low (0-1), High (1+).
+        </li>
+        <li>
+            <strong>Sugar:</strong> Low (0), High (1+).
+        </li>
+        <li>
+            <strong>Blood Glucose Random:</strong> Low (70-120 mg/dL), High (120+ mg/dL).
+        </li>
+        <li>
+            <strong>Blood Urea:</strong> Low (10-50 mg/dL), High (50-100 mg/dL).
+        </li>
+        <li>
+            <strong>Serum Creatinine:</strong> Low (0.1-5 mg/dL), High (5-10 mg/dL).
+        </li>
+        <li>
+            <strong>Sodium:</strong> Low (120-135 mEq/L), High (135+ mEq/L).
+        </li>
+        <li>
+            <strong>Potassium:</strong> Low (3.5-5 mEq/L), High (5+ mEq/L).
+        </li>
+        <li>
+            <strong>Haemoglobin:</strong> Low (1-5 g/dL), High (15-20 g/dL).
+        </li>
+        <li>
+            <strong>Packed Cell Volume:</strong> Low (24-36%), High (36+ %).
+        </li>
+        <li>
+            <strong>White Blood Cell Count:</strong> Low (0-5000 cells/µL), High (5000-10000 cells/µL).
+        </li>
+        <li>
+            <strong>Red Blood Cell Count:</strong> Low (2-6 million cells/µL), High (6-10 million cells/µL).
+        </li>
+        <li>
+            <strong>Hypertension:</strong> Low (0), High (1).
+        </li>
+        <li>
+            <strong>Diabetes Mellitus:</strong> Low (0), High (1).
+        </li>
+    </ul>
+</div>
+
+          
+
+        <form action="{{ url_for('predictkidney')}}" method="post" class="form">
+            <fieldset>
+                <h5>Please enter the patient details:</h5><hr>
+                <div class="tabcontent" id="new">
+                    <!-- Important fields -->
+                    <div class="form-group">
+                        <label for="age">Age (1 - 100 years)</label>
+                        <input class="form-control" type="number" id="age" name="age">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="blood_pressure">Blood Pressure (50 - 200 mmHg)</label>
+                        <input class="form-control" id="blood_pressure" name="blood_pressure">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="specific_gravity">Specific Gravity</label>
+                        <input class="form-control" id="specific_gravity" name="specific_gravity">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="albumin">Albumin (1 - 10 g/dL)</label>
+                        <input class="form-control" id="albumin" name="albumin">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="sugar">Blood Sugar Level (50 - 300 mg/dL)</label>
+                        <input class="form-control" id="sugar" name="sugar">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="blood_glucose_random">Blood Glucose Random</label>
+                        <input class="form-control" id="blood_glucose_random" name="blood_glucose_random">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="blood_urea">Blood Urea (10 - 100 mg/dL)</label>
+                        <input class="form-control" id="blood_urea" name="blood_urea">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="serum_creatinine">Serum Creatinine (0.1 - 10 mg/dL)</label>
+                        <input class="form-control" id="serum_creatinine" name="serum_creatinine">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="sodium">Sodium</label>
+                        <input class="form-control" id="sodium" name="sodium">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="potassium">Potassium</label>
+                        <input class="form-control" id="potassium" name="potassium">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="haemoglobin">Haemoglobin (1 - 20 g/dL)</label>
+                        <input class="form-control" id="haemoglobin" name="haemoglobin">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="packed_cell_volume">Packed Cell Volume</label>
+                        <input class="form-control" id="packed_cell_volume" name="packed_cell_volume">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="white_blood_cell_count">White Blood Cell Count (0 - 10000 cells/µL)</label>
+                        <input class="form-control" id="white_blood_cell_count" name="white_blood_cell_count">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="red_blood_cell_count">Red Blood Cell Count (1 - 10 million cells/µL)</label>
+                        <input class="form-control" id="red_blood_cell_count" name="red_blood_cell_count">
+                    </div>
+            
+                    <div class="form-group">
+                      <label for="hypertension">Hypertension:</label>
+                      <select class="form-control" id="hypertension" name="hypertension">
+                          <option value="1">Yes</option>
+                          <option value="0">No</option>
+                      </select>
+                  </div>
+                  
+                  
+                  <div class="form-group">
+                    <label for="diabetes_mellitus">Diabetes Mellitus:</label>
+                    <select class="form-control" id="diabetes_mellitus" name="diabetes_mellitus">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                
+                  
+            
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn btn-lg">Predict</button>
+                </div>
+            </fieldset>
+            
+        </form>
+      </div>
+    <div class="explanation">
+    <h2>Kidney Disease Prediction</h2>
+    <p>
+        Before we explore the features for predicting kidney disease, let's understand how these features contribute to assessing the risk of kidney-related issues. Each feature provides valuable insights that aid in evaluating the overall condition of the kidneys.
+    </p>
+    <ul>
+        <li>
+            <strong>Age:</strong> The age of the individual. Ranges from 0 to 30 years (Low risk) and 31+ years (High risk).
+        </li>
+        <li>
+            <strong>Blood Pressure:</strong> The blood pressure of the individual. Ranges from 60-80 mmHg (Low risk) and 80+ mmHg (High risk).
+        </li>
+        <li>
+            <strong>Specific Gravity:</strong> The specific gravity of urine. Ranges from 1.000 to 1.010 (Low risk) and 1.010+ (High risk).
+        </li>
+        <li>
+            <strong>Albumin:</strong> The level of albumin in the urine. Low (0-1) and High (1+). Elevated values may indicate kidney issues.
+        </li>
+        <li>
+            <strong>Sugar:</strong> The presence of sugar in the urine. Low (0) and High (1+). Elevated levels may be associated with kidney dysfunction.
+        </li>
+        <li>
+            <strong>Blood Glucose Random:</strong> The random blood glucose level. Low (70-120 mg/dL) and High (120+ mg/dL). Elevated levels may indicate diabetes.
+        </li>
+        <li>
+            <strong>Blood Urea:</strong> The concentration of urea in the blood. Low (10-50 mg/dL) and High (50-100 mg/dL). Elevated levels may indicate potential kidney dysfunction.
+        </li>
+        <li>
+            <strong>Serum Creatinine:</strong> The level of creatinine in the blood. Low (0.1-5 mg/dL) and High (5-10 mg/dL). Higher values can suggest impaired kidney function.
+        </li>
+        <li>
+            <strong>Sodium:</strong> The sodium level in the blood. Low (120-135 mEq/L) and High (135+ mEq/L). Abnormal levels may impact kidney function.
+        </li>
+        <li>
+            <strong>Potassium:</strong> The potassium level in the blood. Low (3.5-5 mEq/L) and High (5+ mEq/L). Abnormal levels may affect kidney health.
+        </li>
+        <li>
+            <strong>Haemoglobin:</strong> The amount of hemoglobin in the blood. Low (1-5 g/dL) and High (15-20 g/dL). Abnormal levels may be associated with kidney issues.
+        </li>
+        <li>
+            <strong>Packed Cell Volume:</strong> The proportion of blood volume occupied by red blood cells. Low (24-36%) and High (36+ %). Abnormal levels may indicate kidney disorders.
+        </li>
+        <li>
+            <strong>White Blood Cell Count:</strong> The number of white blood cells per microliter of blood. Low (0-5000 cells/µL) and High (5000-10000 cells/µL). Deviations may indicate infection or inflammation in the kidneys.
+        </li>
+        <li>
+            <strong>Red Blood Cell Count:</strong> The number of red blood cells per microliter of blood. Low (2-6 million cells/µL) and High (6-10 million cells/µL). Abnormal levels may be linked to kidney disorders.
+        </li>
+        <li>
+            <strong>Hypertension:</strong> Indicates the presence (High risk) or absence (Low risk) of hypertension.
+        </li>
+        <li>
+            <strong>Diabetes Mellitus:</strong> Indicates the presence (High risk) or absence (Low risk) of diabetes mellitus.
+        </li>
+    </ul>
+    <p>
+        Understanding the ranges and descriptions of these features is crucial for assessing the risk of kidney disease. Here's a general guideline for risk levels:
+    </p>
+    <ul>
+        <li>
+            <strong>Low Risk:</strong> Values within the lower range of each feature.
+        </li>
+        <li>
+            <strong>High Risk:</strong> Values at the upper range, indicating a significant risk of kidney disease.
+        </li>
+    </ul>
+</div>
+          </section>
+        
+        
+        
+          <!-- end info section -->
+        
+          <!-- footer section -->
+          <section class="info_section layout_padding2">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="info_contact">
+                    <h5>
+                      Address
+                    </h5>
+                    <div class="contact_link_box">
+                      <a href="">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <span>
+                          Location
+                        </span>
+                      </a>
+                      <a href="">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span>
+                          Call +01 1234567890
+                        </span>
+                      </a>
+                      <a href="">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <span>
+                          demo@gmail.com
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="info_social">
+                    <a href="">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="info_link_box">
+                    <h5>
+                      Navigation
+                    </h5>
+                    <div class="info_links">
+                      <a class="active" href="index.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Home <span class="sr-only">(current)</span></a>
+                      <a class="" href="about.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> About</a>
+                      <a class="" href="why.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Why Us </a>
+                      <a class="" href="team.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Our Team</a>
+                      <a class="" href="testimonial.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Testimonial</a>
+                      <a class="" href="contact.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Contact Us</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h5>
+                    Newsletter
+                  </h5>
+                  <form action="">
+                    <input type="text" placeholder="Enter Your email" />
+                    <button type="submit">
+                      Subscribe
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+        
+          <!-- end info section -->
+        
+          <!-- footer section -->
+          <footer class="footer_section container-fluid">
+            <p>
+              &copy; <span id="displayYear"></span> All Rights Reserved. ObesityEpidemicSolutions
+            </p>
+          </footer>
+          <!-- footer section -->
+        
+          <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+          <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+          <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+        
+        </body>
+        
+        </html>

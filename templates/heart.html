@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Obesity Epidemic Solutions</title>
+
+    <!--owl slider stylesheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+
+    <!-- bootstrap core css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/bootstrap.css') }}"
+    />
+    <!-- fonts awesome style -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/font-awesome.min.css') }}"
+    />
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,500,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template -->
+    <link
+      type="text/css"
+      href="{{ url_for('static', filename='css/style.css') }}"
+      rel="stylesheet"
+    />
+    <!-- responsive style -->
+    <link
+      type="text/css"
+      href="{{ url_for('static', filename='css/responsive.css"
+      rel="stylesheet') }}"
+    />
+    <style></style>
+  </head>
+
+  <body>
+    <div class="hero_area">
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="contact_nav_container">
+          <div class="container">
+            <div class="contact_nav">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span> Address : NSTI Mumbai, Chunnabhati, Mumbai </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span> Email : shivampabrekar123@gmail.com </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span> Phone Call : +01 123455678990 </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+              </button>
+            </div>
+            <div id="myNav" class="overlay">
+              <div class="menu_btn-style">
+                <button onclick="closeNav()">
+                  <span class="s-1"> </span>
+                  <span class="s-2"> </span>
+                  <span class="s-3"> </span>
+                </button>
+              </div>
+              <div class="overlay-content">
+                <a class="active" href="/">
+                  Home <span class="sr-only">(current)</span></a
+                >
+                <a class="" href="/about"> About</a>
+                <a class="" href="/why"> Why Us </a>
+                <a class="" href="/team"> Our Team</a>
+                <a class="" href="/testimonial"> Testimonial</a>
+                <a class="" href="/contact"> Contact Us</a>
+                <a class="" href="/dashboard">Dashboard</a>
+              </div>
+            </div>
+            <a class="navbar-brand" href="/">
+              <span> Obesity Epidemic Solutions </span>
+            </a>
+            <div class="user_option">
+              <!-- <a href="">
+              <span>
+                Login
+              </span>
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </a> -->
+              <!-- <form class="form-inline">
+              <button class="btn  nav_search-btn" type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form> -->
+            </div>
+          </nav>
+        </div>
+      </header>
+                                <section class="info_section layout_padding2" style="margin: 50px auto;">
+                                    <h1>Heart Disease Prediction</h1>
+                                    <div class="container">
+                                      <div class="cta-form">
+                                        <h2>Fill out the form!</h2>
+                                        <p>Check out the comments for line-by-line explanations.</p>
+                              
+                                        <!-- Risk Levels for Diabetes Features -->
+                                        <ul>
+                                  <li><strong>Low Risk:</strong> Values within the lower range.</li>
+                                  <li>
+                                      <strong>High Risk:</strong> High values, indicates potential heart disease risk.
+                                  </li>
+                              </ul>
+                              
+                              <!-- Feature Ranges for Heart Disease -->
+                              <p>Feature Ranges:</p>
+                              <ul>
+                                  <li>
+                                      <strong>Sex:</strong> 0 (Female), 1 (Male)
+                                  </li>
+                                  <li>
+                                      <strong>Chest Pain Type:</strong> 1 (Typical Angina), 2 (Atypical Angina), 3 (Non-Anginal Pain), 4 (Asymptomatic)
+                                  </li>
+                                  <li>
+                                      <strong>Resting Blood Pressure (mmHg):</strong> Low (60-80), Medium (81-120), High (121+)
+                                  </li>
+                                  <li>
+                                      <strong>Cholesterol (mg/dL):</strong> Low (0-150), Medium (151-199), High (200+)
+                                  </li>
+                                  <li>
+                                      <strong>Fasting Blood Sugar > 120 mg/dL:</strong> 0 (False), 1 (True)
+                                  </li>
+                                  <li>
+                                      <strong>Resting Electrocardiographic Results:</strong> 0 (Normal), 1 (ST-T Wave Abnormality), 2 (Probable or Definite Left Ventricular Hypertrophy)
+                                  </li>
+                                  <li>
+                                      <strong>Maximum Heart Rate Achieved:</strong> Low (60-100), Medium (101-150), High (151+)
+                                  </li>
+                                  <li>
+                                      <strong>Exercise Induced Angina:</strong> 0 (No), 1 (Yes)
+                                  </li>
+                                  <li>
+                                      <strong>ST Depression Induced by Exercise Relative to Rest:</strong> Low (0-1), Medium (1-2), High (2+)
+                                  </li>
+                                  <li>
+                                      <strong>Slope of the Peak Exercise ST Segment:</strong> 0 (Upsloping), 1 (Flat), 2 (Downsloping)
+                                  </li>
+                                  <li>
+                                      <strong>Number of Major Vessels Colored by Fluoroscopy:</strong> 0-3
+                                  </li>
+                                  <li>
+                                      <strong>Thalassemia:</strong> 1 (Normal), 2 (Fixed Defect), 3 (Reversible Defect)
+                                  </li>
+                              </ul>
+                              
+                                      </div>
+                              
+                                      <form action="{{ url_for('predictheart')}}" method="post" class="form">
+                                        <fieldset>
+                                          <h5>Please enter the patient details:</h5><hr>
+                                          <div class="tabcontent" id="new">
+                                              <div class="form-group">
+                                                <label for="age">Age in Years</label>
+                                                <input class="form-control" id="age" name="age">
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                              <label for="sex">Sex:</label>
+                                              <select class="form-control" id="sex" name="sex">
+                                                  <option value="1">Male</option>
+                                                  <option value="0">Female</option>
+                                              </select>
+                                          </div>
+                                          
+                                            
+                                            <div class="form-group">
+                                                <label for="CP">Chest Pain Type (1: Typical Angina, 2: Atypical Angina, 3: Non-Anginal Pain, 4: Asymptomatic)</label>
+                                                <input class="form-control"  id="CP" name="CP">
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="trestbps">Resting Blood Pressure (mmHg)</label>
+                                                <input class="form-control"  id="trestbps" name="trestbps">
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="chol">Cholesterol (mg/dL)</label>
+                                                <input class="form-control" id="chol" name="chol">
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="FBS">Fasting Blood Sugar > 120 mg/dL (1: True, 0: False)</label>
+                                                <input class="form-control"  id="FBS" name="FBS">
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="restecg">Resting Electrocardiographic Results (0: Normal, 1: ST-T Wave Abnormality, 2: Probable or Definite Left Ventricular Hypertrophy)</label>
+                                                <input class="form-control"  id="restecg" name="restecg">
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="thalach">Maximum Heart Rate Achieved</label>
+                                                <input class="form-control"  id="thalach" name="thalach">
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="EXANG">Exercise Induced Angina (1: Yes, 0: No)</label>
+                                                <input class="form-control"  id="EXANG" name="EXANG">
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="oldpeak">ST Depression Induced by Exercise Relative to Rest</label>
+                                                <input class="form-control"  id="oldpeak" name="oldpeak">
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="SLOPE">Slope of the Peak Exercise ST Segment (0: Upsloping, 1: Flat, 2: Downsloping)</label>
+                                                <input class="form-control"  id="SLOPE" name="SLOPE">
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="CA">Number of Major Vessels Colored by Fluoroscopy (0-3)</label>
+                                                <input class="form-control"  id="CA" name="CA">
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="THAL">Thalassemia (1: Normal, 2: Fixed Defect, 3: Reversible Defect)</label>
+                                                <input class="form-control"  id="THAL" name="THAL">
+                                            </div>
+                              
+                                          <button type="submit" class="btn btn-primary btn-lg">
+                                            Predict
+                                          </button>
+                                        </fieldset>
+                                      </form>
+                                    </div>
+                                   <div class="explanation">
+                                  <p>
+                                      Before we delve into heart disease features, let's understand how these
+                                      features play a crucial role in predicting heart disease risk. Each feature
+                                      provides valuable information that contributes to the overall assessment.
+                                  </p>
+                                  <ul>
+                                      <li>
+                                          <strong>Sex:</strong> Gender of the person (0 for Female, 1 for Male).
+                                      </li>
+                                      <li>
+                                          <strong>Chest Pain Type:</strong> Type of chest pain (1: Typical Angina, 2: Atypical Angina, 3: Non-Anginal Pain, 4: Asymptomatic).
+                                      </li>
+                                      <li>
+                                          <strong>Resting Blood Pressure (mmHg):</strong> The diastolic blood pressure.
+                                      </li>
+                                      <li>
+                                          <strong>Cholesterol (mg/dL):</strong> Cholesterol level in mg/dL.
+                                      </li>
+                                      <li>
+                                          <strong>Fasting Blood Sugar > 120 mg/dL:</strong> 1 if true, 0 if false.
+                                      </li>
+                                      <li>
+                                          <strong>Resting Electrocardiographic Results:</strong> 0 for Normal, 1 for ST-T Wave Abnormality, 2 for Probable or Definite Left Ventricular Hypertrophy.
+                                      </li>
+                                      <li>
+                                          <strong>Maximum Heart Rate Achieved:</strong> Maximum heart rate achieved during exercise.
+                                      </li>
+                                      <li>
+                                          <strong>Exercise Induced Angina:</strong> 1 if Yes, 0 if No.
+                                      </li>
+                                      <li>
+                                          <strong>ST Depression Induced by Exercise Relative to Rest:</strong> ST depression induced by exercise relative to rest.
+                                      </li>
+                                      <li>
+                                          <strong>Slope of the Peak Exercise ST Segment:</strong> 0 for Upsloping, 1 for Flat, 2 for Downsloping.
+                                      </li>
+                                      <li>
+                                          <strong>Number of Major Vessels Colored by Fluoroscopy:</strong> Number of major vessels colored by fluoroscopy (0-3).
+                                      </li>
+                                      <li>
+                                          <strong>Thalassemia:</strong> 1 for Normal, 2 for Fixed Defect, 3 for Reversible Defect.
+                                      </li>
+                                  </ul>
+                                  <p>
+                                      Understanding the ranges and descriptions of these features is crucial
+                                      for assessing heart disease risk. Here's a general guideline for risk
+                                      levels:
+                                  </p>
+                                  <ul>
+                                      <li>
+                                          <strong>Low Risk:</strong> Values within the lower range of each feature.
+                                      </li>
+                                      <li>
+                                          <strong>High Risk:</strong> Values at the upper range, indicating a significant risk of heart disease.
+                                      </li>
+                                  </ul>
+                              </div>
+          </section>
+        
+        
+        
+          <!-- end info section -->
+        
+          <!-- footer section -->
+          <section class="info_section layout_padding2">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="info_contact">
+                    <h5>
+                      Address
+                    </h5>
+                    <div class="contact_link_box">
+                      <a href="">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <span>
+                          Location
+                        </span>
+                      </a>
+                      <a href="">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span>
+                          Call +01 1234567890
+                        </span>
+                      </a>
+                      <a href="">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <span>
+                          demo@gmail.com
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="info_social">
+                    <a href="">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="info_link_box">
+                    <h5>
+                      Navigation
+                    </h5>
+                    <div class="info_links">
+                      <a class="active" href="index.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Home <span class="sr-only">(current)</span></a>
+                      <a class="" href="about.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> About</a>
+                      <a class="" href="why.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Why Us </a>
+                      <a class="" href="team.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Our Team</a>
+                      <a class="" href="testimonial.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Testimonial</a>
+                      <a class="" href="contact.html"> <i class="fa fa-angle-right" aria-hidden="true"></i> Contact Us</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <h5>
+                    Newsletter
+                  </h5>
+                  <form action="">
+                    <input type="text" placeholder="Enter Your email" />
+                    <button type="submit">
+                      Subscribe
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+        
+          <!-- end info section -->
+        
+          <!-- footer section -->
+          <footer class="footer_section container-fluid">
+            <p>
+              &copy; <span id="displayYear"></span> All Rights Reserved. ObesityEpidemicSolutions
+            </p>
+          </footer>
+          <!-- footer section -->
+        
+          <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+          <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+          <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+        
+        </body>
+        
+        </html>
